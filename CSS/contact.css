@@ -1,0 +1,91 @@
+.contact-container{
+	display: inline-block;
+	flex-direction: column;
+	width: 100%;
+	margin: 5px;
+	padding: 10px;
+	text-align: center;
+}
+.contact-item{
+	display: inline-block;
+	width: 25%;
+	min-height: 175px;
+	flex-wrap: wrap;
+	top: 10px;
+	padding: 20px;
+	background: white;
+	border-radius: 10px;
+	margin: 25px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+.icon img{ display: inline; float: left; width: 25%; height: 25%;}
+.contact-info h1{
+	font-variant: small-caps;
+	font-size: 250%;
+	color: pink;
+	text-align: center;
+}
+.contact-info h2{font-size: 140%;}
+
+.contact-item:hover{box-shadow: 0px 0px 10px 0 yellow;}
+.social{
+	display: inline;
+	margin: 5px;
+	padding: 5px;
+	width: 100%;
+}
+.social-item a img{
+	display: inline-block;
+	float: left;
+	margin: 5px;
+	padding: 5px;
+	margin-left: 8%;
+	padding-top: 10px;
+	border-radius: 50%;
+	width: 10%;
+	filter: grayscale(0.8);
+	transition: 0.2s ease;
+}
+.social-item img:hover{
+	box-shadow: 0px 0px 10px 0 yellow;
+	filter: grayscale(0);
+}
+footer{	float: right;}
+@media screen and (max-width: 780px) {
+	.contact-item{
+		width: 80%;
+		font-size: 90%;
+		margin-top: 3px;
+	}
+	.social-item a img{
+		margin-left: 5%;
+		padding: 2px;
+		width: 13%;
+	}
+}
+@media print{
+	.icon img{
+		display: none;
+	}
+	.contact-item{
+		display: block;
+		width: 80%;
+		min-height: 0;
+		margin: 0;
+		padding: 0;
+		padding-bottom: 2px;
+	}
+	.social-item{
+		display: block;
+		width: 100%;
+	}
+	.social-item a img{
+		width: 20px;
+		margin:0px;
+		padding: 0px;
+		clear: both;
+		left:2%;
+	}
+}

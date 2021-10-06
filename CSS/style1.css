@@ -1,0 +1,60 @@
+@font-face {
+  font-family: myFont;
+  src: url("../Font/Arcena.ttf");
+}
+div p{
+	font-family: myFont;
+	text-shadow: 2px 2px gray;
+}
+#text1{
+	display: inline-block;
+	width: 60%;
+	float: left;	
+	padding: 5px;
+	margin: 10px;
+	text-align: center;
+	font-size: 250%;
+	color: white;
+	animation: fadeIn ease 5s;
+  	-webkit-animation: fadeIn ease 5s;
+  	-moz-animation: fadeIn ease 5s;
+  	-o-animation: fadeIn ease 5s;
+  	-ms-animation: fadeIn ease 5s;
+}
+#myCarousel{
+	display: inline-block;
+	float: right;
+	top: 10px;
+	width: 25%;
+	margin: 2%;
+	animation: fadeIn ease 5s;
+}
+/*Keyframes*/
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+/*Media queries*/
+@media screen and (max-width: 900px){
+	#text1{
+		font-size: 200%;
+		padding-right: 10px;
+		text-align: justify;
+		width: 100%;
+	}
+	#myCarousel{
+		width: 50%;
+		clear: both;
+		right: 22%;
+		margin-bottom: 10%;
+	}
+}
+@media print{
+	#myCarousel{
+		display: none;
+	}
+}
